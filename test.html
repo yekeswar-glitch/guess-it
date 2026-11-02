@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Word Guessing</h1>
+      <p class="subtitle">Guess the hidden word before your 6 turns run out.</p>
+
+      <div class="game-layout">
+        <section class="board-panel">
+          <div id="board" class="board" aria-live="polite"></div>
+
+          <div id="keyboard" class="keyboard" aria-label="Keyboard"></div>
+
+          <div id="status" class="status">Loading game...</div>
+
+          <div class="input-row">
+            <input id="guessInput" type="text" maxlength="7" placeholder="Enter a word" aria-label="Guess the word" />
+            <button id="guessBtn" class="primary" type="button">Guess</button>
+            <button id="newGameBtn" class="secondary" type="button">New Game</button>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <h2>Game Info</h2>
+
+          <div class="meta">
+            <div class="meta-item">
+              <span class="label">Word Length</span>
+              <span id="wordLengthValue" class="value">5 letters</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Turns Left</span>
+              <span id="turnsLeftValue" class="value">6 turns left</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Score</span>
+              <span id="scoreValue" class="value">0</span>
+            </div>
+          </div>
+
+          <div>
+            <h3>Incorrect Letters</h3>
+            <div id="incorrectList" class="list-box"><span class="empty">None yet</span></div>
+          </div>
+
+          <div style="margin-top: 18px;">
+            <h3>Misplaced Letters</h3>
+            <div id="misplacedList" class="list-box"><span class="empty">None yet</span></div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
